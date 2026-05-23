@@ -77,16 +77,16 @@ All text above, and the splash screen must be included in any redistribution
 // #define SSD1327_CMDLOCK 0xFD
 
 /*! The controller object for SSD1327 OLED displays */
-class Adafruit_SH1122 : public Adafruit_GrayOLED {
+class NotAdafruit_SH1122 : public Adafruit_GrayOLED {
 public:
-  Adafruit_SH1122(uint16_t w, uint16_t h, TwoWire *twi = &Wire,
+  NotAdafruit_SH1122(uint16_t w, uint16_t h, TwoWire *twi = &Wire,
                    int8_t rst_pin = -1, uint32_t preclk = 400000,
                    uint32_t postclk = 100000);
-  Adafruit_SH1122(uint16_t w, uint16_t h, int8_t mosi_pin, int8_t sclk_pin,
+  NotAdafruit_SH1122(uint16_t w, uint16_t h, int8_t mosi_pin, int8_t sclk_pin,
                    int8_t dc_pin, int8_t rst_pin, int8_t cs_pin);
-  Adafruit_SH1122(uint16_t w, uint16_t h, SPIClass *spi, int8_t dc_pin,
+  NotAdafruit_SH1122(uint16_t w, uint16_t h, SPIClass *spi, int8_t dc_pin,
                    int8_t rst_pin, int8_t cs_pin, uint32_t bitrate = 8000000UL);
-  ~Adafruit_SH1122(void);
+  ~NotAdafruit_SH1122(void);
 
   bool begin(uint8_t i2caddr = SH1122_I2C_ADDRESS, bool reset = true);
   void display();

@@ -53,7 +53,7 @@ redistribution
     @note   Call the object's begin() function before use -- buffer
             allocation is performed there!
 */
-Adafruit_SH1122::Adafruit_SH1122(uint16_t w, uint16_t h, TwoWire *twi,
+NotAdafruit_SH1122::NotAdafruit_SH1122(uint16_t w, uint16_t h, TwoWire *twi,
                                    int8_t rst_pin, uint32_t clkDuring,
                                    uint32_t clkAfter)
     : Adafruit_GrayOLED(4, w, h, twi, rst_pin, clkDuring, clkAfter) {}
@@ -84,7 +84,7 @@ Adafruit_SH1122::Adafruit_SH1122(uint16_t w, uint16_t h, TwoWire *twi,
     @note   Call the object's begin() function before use -- buffer
             allocation is performed there!
 */
-Adafruit_SH1122::Adafruit_SH1122(uint16_t w, uint16_t h, int8_t mosi_pin,
+NotAdafruit_SH1122::NotAdafruit_SH1122(uint16_t w, uint16_t h, int8_t mosi_pin,
                                    int8_t sclk_pin, int8_t dc_pin,
                                    int8_t rst_pin, int8_t cs_pin)
     : Adafruit_GrayOLED(4, w, h, mosi_pin, sclk_pin, dc_pin, rst_pin, cs_pin) {}
@@ -114,15 +114,15 @@ Adafruit_SH1122::Adafruit_SH1122(uint16_t w, uint16_t h, int8_t mosi_pin,
     @note   Call the object's begin() function before use -- buffer
             allocation is performed there!
 */
-Adafruit_SH1122::Adafruit_SH1122(uint16_t w, uint16_t h, SPIClass *spi,
+NotAdafruit_SH1122::NotAdafruit_SH1122(uint16_t w, uint16_t h, SPIClass *spi,
                                    int8_t dc_pin, int8_t rst_pin, int8_t cs_pin,
                                    uint32_t bitrate)
     : Adafruit_GrayOLED(4, w, h, spi, dc_pin, rst_pin, cs_pin, bitrate) {}
 
 /*!
-    @brief  Destructor for Adafruit_SH1122 object.
+    @brief  Destructor for NotAdafruit_SH1122 object.
 */
-Adafruit_SH1122::~Adafruit_SH1122(void) {}
+NotAdafruit_SH1122::~NotAdafruit_SH1122(void) {}
 
 // ALLOCATE & INIT DISPLAY -------------------------------------------------
 
@@ -146,7 +146,7 @@ Adafruit_SH1122::~Adafruit_SH1122(void) {}
             proceeding.
     @note   MUST call this function before any drawing or updates!
 */
-bool Adafruit_SH1122::begin(uint8_t addr, bool reset) {
+bool NotAdafruit_SH1122::begin(uint8_t addr, bool reset) {
 
   if (!Adafruit_GrayOLED::_init(addr, reset)) {
     return false;
@@ -233,7 +233,7 @@ static const uint8_t init_256x64[] = {
 /*!
     @brief  Do the actual writing of the internal frame buffer to display RAM
 */
-void Adafruit_SH1122::display(void) {
+void NotAdafruit_SH1122::display(void) {
   // ESP8266 needs a periodic yield() call to avoid watchdog reset.
   // With the limited size of SSD1327 displays, and the fast bitrate
   // being used (1 MHz or more), I think one yield() immediately before
@@ -339,6 +339,6 @@ void Adafruit_SH1122::display(void) {
             If true, switch to invert mode (black-on-white), else normal
             mode (white-on-black).
 */
-void Adafruit_SH1122::invertDisplay(bool i) {
+void NotAdafruit_SH1122::invertDisplay(bool i) {
   oled_command(i ? SH1122_INVERTDISPLAY : SH1122_NORMALDISPLAY);
 }

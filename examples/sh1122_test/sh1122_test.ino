@@ -12,12 +12,12 @@
 #define OLED_RESET 21
 
 // software SPI UNTESTED
-//Adafruit_SH1122 display(128, 128, OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
+//NotAdafruit_SH1122 display(128, 128, OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
 // hardware SPI
-Adafruit_SH1122 display(256, 64, &SPI, OLED_DC, OLED_RESET, OLED_CS);
+NotAdafruit_SH1122 display(256, 64, &SPI, OLED_DC, OLED_RESET, OLED_CS);
 
 // I2C UNTESTED
-// Adafruit_SH1122 display(128, 128, &Wire, OLED_RESET, 1000000);
+// NotAdafruit_SH1122 display(128, 128, &Wire, OLED_RESET, 1000000);
 
 #define NUMFLAKES 10
 #define XPOS 0
