@@ -16,3 +16,8 @@ All text above must be included in any redistribution
 </blockquote>
 
 with reference to commandset from the [u8g2](https://github.com/olikraus/u8g2/) code.
+
+## TODO
+
+[ ] Fix partial/windowed updates.
+[ ] Reconcile the ssd1327 driver's other init commands (this has only the basics stolen from u8g2). Maybe there's something worth having.
