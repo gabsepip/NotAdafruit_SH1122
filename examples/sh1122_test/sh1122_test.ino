@@ -1,4 +1,4 @@
-#include <Adafruit_SSD1327.h>
+#include <NotAdafruit_SH1122.h>
 
 // Used for software SPI
 #define OLED_CLK 13

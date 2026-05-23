@@ -14,8 +14,8 @@ Written by Limor Fried/Ladyada  for Adafruit Industries.
 BSD license, check license.txt for more information
 All text above, and the splash screen must be included in any redistribution
 *********************************************************************/
-#ifndef ADAFRUIT_SSD1327_H
-#define ADAFRUIT_SSD1327_H
+#ifndef NOTADAFRUIT_SH1122_H
+#define NOTADAFRUIT_SH1122_H
 
 #include <Adafruit_GrayOLED.h>
 

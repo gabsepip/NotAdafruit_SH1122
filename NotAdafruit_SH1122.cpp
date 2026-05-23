@@ -16,7 +16,7 @@ All text above, and the splash screen below must be included in any
 redistribution
 *********************************************************************/
 
-#include "Adafruit_SSD1327.h"
+#include "NotAdafruit_SH1122.h"
 #include "splash.h"
 
 // CONSTRUCTORS, DESTRUCTOR ------------------------------------------------
